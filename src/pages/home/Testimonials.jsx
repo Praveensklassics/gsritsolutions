@@ -5,22 +5,22 @@ const testimonialsData = [
   {
     title: 'Great Work',
     quote: '"I think Educrat is the best theme I ever seen this year. Amazing design, easy to customize and a design quality superlative account on its cloud platform for the optimized performance."',
-    name: 'Ronald Richards',
-    role: 'President of Sales',
+    name: 'Mr. Ravi Chandra',
+    role: 'Gen AI Developer',
     avatar: 'https://randomuser.me/api/portraits/men/10.jpg',
   },
   {
     title: 'Perfect Job',
     quote: '"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less"',
-    name: 'Annette Black',
-    role: 'Web Designer',
+    name: 'Mr. Raju',
+    role: 'Gen AI Developer',
     avatar: 'https://randomuser.me/api/portraits/women/11.jpg',
   },
   {
     title: 'Service Good',
-    quote: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae."',
-    name: 'Robert Fox',
-    role: 'Marketing',
+    quote: '"The service quality is excellent. The team is responsive, supportive, and truly understands the needs of learners. Everything from course content to guidance exceeded my expectations."',  
+      name: 'Ms. Jyothi',
+    role: 'Python Developer',
     avatar: 'https://randomuser.me/api/portraits/men/12.jpg',
   },
 ];
@@ -39,7 +39,6 @@ const TestimonialCard = ({ title, quote, name, role, avatar }) => (
         <h4 className="font-bold text-blue-600 text-lg">{title}</h4>
         <p className="mt-4 text-gray-600 text-sm leading-relaxed">{quote}</p>
         <div className="mt-6 flex items-center space-x-3">
-            <img src={avatar} alt={name} className="w-12 h-12 rounded-full object-cover" />
             <div>
                 <h5 className="font-semibold text-gray-900">{name}</h5>
                 <p className="text-gray-500 text-xs">{role}</p>
@@ -54,8 +53,7 @@ const Testimonials = () => {
     <div className="bg-[#6440FB] text-white py-20">
       <div className="container mx-auto px-6">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-400">What People Say</h2>
-          <p className="mt-2 text-indigo-200">Lorem ipsum dolor sit amet, consectetur.</p>
+          <h2 className="text-5xl font-bold text-green-400">What People Say ?</h2>
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">

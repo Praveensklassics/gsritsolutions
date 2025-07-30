@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -49,14 +50,17 @@ const Navbar = () => {
 
         {/* Icons + Login (Desktop) */}
         <div className="hidden md:flex items-center gap-6">
-          <Search className="text-white w-5 h-5 cursor-pointer" />
+          {/* <Search className="text-white w-5 h-5 cursor-pointer" /> */}
           <div className="relative">
-            <ShoppingBag className="text-white w-5 h-5 cursor-pointer" />
-            <span className="absolute -top-2 -right-2 bg-[#7C4DFF] text-white text-[10px] px-1 rounded-full">0</span>
+            {/* <ShoppingBag className="text-white w-5 h-5 cursor-pointer" /> */}
+            {/* <span className="absolute -top-2 -right-2 bg-[#7C4DFF] text-white text-[10px] px-1 rounded-full">0</span> */}
           </div>
-          <button className="bg-white text-[#12003E] px-5 py-1.5 rounded-xl font-semibold text-sm">
-            Log in
-          </button>
+          <button
+      className="bg-white text-[#12003E] px-5 py-1.5 rounded-xl font-semibold text-sm"
+      onClick={() => navigate("/login")}
+    >
+      Log in
+    </button>
         </div>
       </div>
 

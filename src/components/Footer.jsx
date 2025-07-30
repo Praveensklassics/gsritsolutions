@@ -34,35 +34,34 @@ const Footer = () => {
             <ul className="space-y-1 text-[#B6B6C6] text-sm">
               <li>About</li>
               <li>Contact</li>
-              <li>Help Center</li>
-              <li>Refund</li>
-              <li>Conditions</li>
-              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Careers</li>
+        
             </ul>
           </div>
           {/* Categories */}
           <div>
             <h3 className="font-bold mb-2">CATEGORIES</h3>
             <ul className="space-y-1 text-[#B6B6C6] text-sm">
-              <li>Design</li>
-              <li>Development</li>
-              <li>Marketing</li>
-              <li>Finance & Accounting</li>
-              <li>IT & Software</li>
-              <li>Sales Marketing</li>
-              <li>Photography</li>
+              <li>AI Tools</li>
+              <li>Softwrae Development</li>
+              <li>Cyber Security</li>
+              <li>Gen AI</li>
+              <li>Cloud Computing</li>
+             
             </ul>
           </div>
           {/* More Categories */}
           <div>
             <h3 className="font-bold mb-2 invisible md:visible">&nbsp;</h3>
             <ul className="space-y-1 text-[#B6B6C6] text-sm">
-              <li>UX Design</li>
-              <li>Art & Humanities</li>
-              <li>Social Sciences</li>
-              <li>Personal</li>
+            <li>Full Stack Python</li>
+            <li>Data Analyst</li>
+              <li>Personal Development</li>
+              <li>Communication Skills</li>
               <li>Lifestyle</li>
-              <li>Seo</li>
+
+             
             </ul>
           </div>
           {/* Support */}
@@ -79,16 +78,32 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-2">GET IN TOUCH</h3>
             <p className="text-[#B6B6C6] text-xs mb-3">We don't send spam so don't worry.</p>
-            <form className="flex w-full max-w-xs mx-auto md:mx-0">
-              <input
-                type="email"
-                placeholder="Your Email..."
-                className="px-4 py-2 rounded-l-full text-white outline-none flex-1 min-w-0 border border-[#2D1E6B] focus:border-[#7C4DFF] transition"
-              />
-              <button className="bg-[#7C4DFF] px-6 py-2 rounded-r-full hover:bg-[#6936ff] transition text-white font-semibold whitespace-nowrap">
-                Submit
-              </button>
-            </form>
+            <form 
+  action="https://api.web3forms.com/submit" 
+  method="POST"
+  className="flex w-full max-w-xs mx-auto md:mx-0"
+>
+  {/* Web3Forms Access Key */}
+  <input type="hidden" name="access_key" value="7ec9b244-5f7c-499b-8cbd-20da14a15195" />
+
+  {/* Email field */}
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email..."
+    required
+    className="px-4 py-2 rounded-l-full text-gray-800 outline-none flex-1 min-w-0 border border-[#2D1E6B] focus:border-[#7C4DFF] transition"
+  />
+
+  {/* Submit Button */}
+  <button 
+    type="submit"
+    className="bg-[#7C4DFF] px-6 py-2 rounded-r-full hover:bg-[#6936ff] transition text-white font-semibold whitespace-nowrap"
+  >
+    Submit
+  </button>
+</form>
+
           </div>
         </div>
         {/* Bottom Bar */}

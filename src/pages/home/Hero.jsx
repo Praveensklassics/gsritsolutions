@@ -2,7 +2,7 @@
 import React from "react";
 import TrustedLogos from "../../components/TrusteLogos";
 import TopCategories from "../../components/TopCatergories";
-import InstructorSection from "./InstructoerSection";
+// import InstructorSection from "./InstructoerSection";
 import WhyLearn from "./WhyLearn";
 import PopularCourses from "./PopularCourses";
 import Testimonials from "./Testimonials";
@@ -10,8 +10,12 @@ import LearnAnywhere from "./LearnAnywhere";
 import BlogSection from "../../components/BlogSection";
 import Footer from "../../components/Footer";
 import Learn from "../../components/Learn";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 
 const Hero = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   return (
     <>
     <section
@@ -33,8 +37,18 @@ const Hero = () => {
             GSR IT Solutions delivers innovative technology, consulting, and digital transformation services to help your business grow and succeed in a digital world.
           </p>
           <div className="flex gap-4 mb-8">
-            <button className="bg-[#7C4DFF] text-white px-6 py-3 rounded-lg font-semibold">Get Started</button>
-            <button className="border border-[#00FF9C] text-[#00FF9C] px-6 py-3 rounded-lg font-semibold">Our Services</button>
+          <button
+                className="bg-[#7C4DFF] text-white px-6 py-3 rounded-lg font-semibold"
+                onClick={() => navigate("/courses")} // Redirect to /courses
+              >
+                Get Started
+              </button>
+              <button
+                className="border border-[#00FF9C] text-[#00FF9C] px-6 py-3 rounded-lg font-semibold"
+                onClick={() => navigate("/courses")} // Redirect to /courses
+              >
+                Our Services
+              </button>
           </div>
           <div className="flex gap-10 text-sm text-gray-300">
             <div>
@@ -77,12 +91,12 @@ const Hero = () => {
           <div className="absolute left-[55%] top-8 bg-white px-4 py-2 rounded-2xl shadow-xl flex items-center gap-4 z-20 min-w-[220px] animate-fade-in-scale">
             <img
               src="https://randomuser.me/api/portraits/men/32.jpg"
-              alt="Ali Tufan"
+              alt="Kishore"
               className="w-12 h-12 object-cover rounded-xl"
             />
             <div>
-              <p className="font-bold text-[#1B0A4E] leading-tight">Ali Tufan</p>
-              <p className="text-gray-500 text-xs">UX/UI Designer</p>
+              <p className="font-bold text-[#1B0A4E] leading-tight">Kishore</p>
+              <p className="text-gray-500 text-xs">Gen AI</p>
               <div className="flex gap-1 mt-1">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -101,7 +115,7 @@ const Hero = () => {
               </svg>
             </div>
             <div>
-              <p className="font-bold text-[#FF6B00] text-lg leading-tight">3.000 +</p>
+              <p className="font-bold text-[#FF6B00] text-lg leading-tight">30,000</p>
               <p className="text-gray-500 text-xs">Free Courses</p>
             </div>
           </div>
@@ -128,7 +142,7 @@ const Hero = () => {
       <Testimonials />
       <Learn />
       <WhyLearn />
-      <InstructorSection />
+      {/* <InstructorSection /> */}
         <LearnAnywhere />
       <div className="min-h-screen flex items-center justify-center bg-white p-6">
         <BlogSection />

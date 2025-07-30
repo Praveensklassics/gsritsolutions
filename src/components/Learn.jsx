@@ -37,9 +37,13 @@ const Learn = () => {
             Money-Back Guarantee
           </li>
         </ul>
-        <button className="mt-8 px-8 py-4 bg-[#1B0A4E] text-white rounded-xl text-lg font-bold hover:bg-[#7C4DFF] transition w-full sm:w-auto">
-          Join Free
-        </button>
+        <button
+  onClick={() => window.open('https://wa.me/919703049286', '_blank')}
+  className="mt-8 px-8 py-4 bg-[#1B0A4E] text-white rounded-xl text-lg font-bold hover:bg-[#7C4DFF] transition w-full sm:w-auto"
+>
+  Join Free
+</button>
+
       </div>
 
       {/* Image Section */}

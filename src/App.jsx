@@ -8,6 +8,8 @@ import CourseDetail from './pages/courses/CourseDetail';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutUs from './pages/about/AboutUs';
 import ContactPage from './pages/contact/Contactus';
+import Register from './pages/register/Register';
+import Login from './pages/login/Login';
 
 function App() {
   return (
@@ -21,6 +23,10 @@ function App() {
             <Route path="/courses/:id" element={<CourseDetail />} />
             <Route path='/about' element={<AboutUs />} />
             <Route path='/contact' element={<ContactPage />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+
+
           </Routes>
         </Router>
         {/* Bottom Wave */}

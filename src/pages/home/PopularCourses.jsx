@@ -27,10 +27,9 @@ const CourseCard = ({ course }) => (
       </div>
       <div className="mt-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <img src={course.instructorImage} alt={course.instructor} className="w-6 h-6 rounded-full" />
           <span className="text-gray-700 font-semibold">{course.instructor}</span>
         </div>
-        <span className="text-indigo-500 font-bold">${course.price}</span>
+        {/* <span className="text-indigo-500 font-bold">${course.price}</span> */}
       </div>
     </div>
   </div>
@@ -42,123 +41,88 @@ const PopularCourses = () => {
     {
       id: 1,
       sale: false,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/07/6-615x435.jpg',
+      image: 'https://futransolutions.com/wp-content/uploads/2023/09/MicrosoftTeams-image-50.jpg',
       rating: 4,
-      reviews: 15,
-      title: 'Learn Figma - UI/UX Design Essential Training',
-      lessons: 9,
-      duration: '16 Days',
+      reviews: 31,
+      title: 'Gen AI',
+      lessons: 6,
+      duration: '3 months',
       level: 'All Levels',
       instructorImage: 'https://randomuser.me/api/portraits/men/1.jpg',
-      instructor: 'Ali Tufan',
-      price: 75,
+      instructor: 'Mr. Kishore Kumar',
       category: 'design',
     },
     {
       id: 2,
       sale: true,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/07/11-615x435.jpg',
+      image: 'https://affiinx-website-live.s3.ap-south-1.amazonaws.com/b900fb30-7621-4cea-926a-b5ad5d6ea5ef/website/service/best-data-analytics-training-institute-in-nashik',
       rating: 4,
       reviews: 22,
-      title: 'The Complete Financial Analyst Training & Investing',
-      lessons: 1,
-      duration: '12 Days',
+      title: 'Data Analytics',
+      lessons: 6,
+      duration: '3 months',
       level: 'All Levels',
       instructorImage: 'https://randomuser.me/api/portraits/women/2.jpg',
-      instructor: 'Juhon Doe',
-      price: 50,
+      instructor: 'Mr. Subba Rao',
       category: 'it-software',
     },
     {
       id: 3,
       sale: false,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/08/19-615x435.jpg',
+      image: 'https://s44783.pcdn.co/in/wp-content/uploads/sites/3/2022/06/cybersecurity-master.jpg.optimal.jpg',
       rating: 3,
       reviews: 8,
-      title: 'Angular - The Complete Guide (2023 Edition)',
-      lessons: 1,
-      duration: '20 Days',
+      title: 'Cyber Security',
+      lessons: 6,
+      duration: '3 months',
       level: 'Expert',
       instructorImage: 'https://randomuser.me/api/portraits/men/3.jpg',
-      instructor: 'Robert Fox',
-      price: 90,
+      instructor: 'Mr. Sai Teja',
       category: 'web-development',
     },
     {
       id: 4,
       sale: true,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/07/15-615x435.jpg',
+      image: 'https://parallelstaff.com/wp-content/uploads/2024/04/cloud_computing-scaled.jpeg.webp',
       rating: 5,
-      reviews: 31,
-      title: 'Learn 3D Modelling And Design For Beginners',
-      lessons: 1,
-      duration: '7 Days',
+      reviews: 20,
+      title: 'Cloud Computing',
+      lessons: 6,
+      duration: '3 months',
       level: 'Expert',
       instructorImage: 'https://randomuser.me/api/portraits/women/4.jpg',
-      instructor: 'Stella Cruz',
-      price: 60,
+      instructor: 'Mr. Vijay',
       category: 'design',
     },
     {
       id: 5,
-      sale: false,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/07/13-615x435.jpg',
-      rating: 3,
-      reviews: 12,
-      title: 'Marketing 2023: Complete Guide To Instagram Growth',
-      lessons: 1,
-      duration: '2 Week',
-      level: 'Beginner',
-      instructorImage: 'https://randomuser.me/api/portraits/men/5.jpg',
-      instructor: 'Ali Tufan',
-      price: 65,
-      category: 'digital-marketing',
+      sale: true,
+      image: 'https://digitalwinacademics.com/wp-content/uploads/2024/06/python-2-768x431.jpg',
+      rating: 5,
+      reviews: 34,
+      title: 'Full Stack Python',
+      lessons: 6,
+      duration: '3 months',
+      level: 'Expert',
+      instructorImage: 'https://randomuser.me/api/portraits/women/4.jpg',
+      instructor: 'Mr. Joseph',
+      category: 'design',
     },
     {
       id: 6,
       sale: true,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/07/7-615x435.jpg',
-      rating: 4,
-      reviews: 18,
-      title: 'Education Software And PHP And JS System Script',
-      lessons: 1,
-      duration: '3 Week',
-      level: 'All Levels',
-      instructorImage: 'https://randomuser.me/api/portraits/women/6.jpg',
-      instructor: 'Juhon Doe',
-      price: 30,
-      category: 'it-software',
-    },
-    {
-      id: 7,
-      sale: false,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/elementor/thumbs/6-pue7ltuppa30x2xkqkg9b9ugbqn60jyfqby3wempau.jpg',
-      rating: 4,
-      reviews: 25,
-      title: 'Advance PHP Knowledge With JS To Make Smart Web',
-      lessons: 1,
-      duration: '5 Week',
-      level: 'All Levels',
-      instructorImage: 'https://randomuser.me/api/portraits/men/7.jpg',
-      instructor: 'Donald Richards',
-      price: 45,
-      category: 'web-development',
-    },
-    {
-      id: 8,
-      sale: false,
-      image: 'https://demoapus1.com/educrat/learnpress/wp-content/uploads/2022/08/18-615x435.jpg',
+      image: 'https://t3.ftcdn.net/jpg/02/14/87/96/360_F_214879686_R3HFJlk6WLr1kcdvy6Q9rtNASKN0BZBS.jpg',
       rating: 5,
-      reviews: 40,
-      title: 'Idea Was Based On Our Experiences Learning Photoshop',
+      reviews: 22,
+      title: 'Web Development',
       lessons: 6,
-      duration: '6 Week',
-      level: 'All Levels',
-      instructorImage: 'https://randomuser.me/api/portraits/women/8.jpg',
-      instructor: 'Albert Flores',
-      price: 25,
+      duration: '3 months',
+      level: 'Expert',
+      instructorImage: 'https://randomuser.me/api/portraits/women/4.jpg',
+      instructor: 'Mr. Hemanth Kumar',
       category: 'design',
     },
+    
   ];
 
   const filteredCourses = activeTab === 'all' ? coursesData : coursesData.filter(course => {
@@ -172,8 +136,7 @@ const PopularCourses = () => {
   const tabs = [
     { id: 'all', label: 'All Courses' },
     { id: 'it-software', label: 'IT & Software' },
-    { id: 'graphic-design', label: 'Graphic Design' },
-    { id: 'digital-marketing', label: 'Digital Marketing' },
+   
     { id: 'web-development', label: 'Web Development' },
   ];
 
@@ -186,7 +149,7 @@ const PopularCourses = () => {
           {tabs.map(tab => (
             <button
               key={tab.id}
-              className={`px-4 py-2 rounded-full text-sm font-semibold ${
+              className={`px-4 py-2 rounded-full text-sm font-semibold {
                 activeTab === tab.id ? 'bg-indigo-500 text-white hover:bg-indigo-600' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               } transition-colors duration-200`}
               onClick={() => setActiveTab(tab.id)}
@@ -195,8 +158,8 @@ const PopularCourses = () => {
             </button>
           ))}
         </div>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {filteredCourses.map(course => (
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {filteredCourses.map(course => (
             <CourseCard key={course.id} course={course} />
           ))}
         </div>
