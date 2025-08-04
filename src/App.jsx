@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from './pages/home/Hero';
 import Navbar from './pages/home/Navbar';
 import CoursesPage from './pages/courses/CoursesPage';
-import CourseDetail from './pages/courses/CourseDetail';
 
 // Import BrowserRouter, Routes, Route from react-router-dom
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/courses" element={<CoursesPage />} />
-            <Route path="/courses/:id" element={<CourseDetail />} />
+            {/* <Route path="/courses/:id" element={<CourseDetail />} /> */}
             <Route path='/about' element={<AboutUs />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/register' element={<Register />} />
