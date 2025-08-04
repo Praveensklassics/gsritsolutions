@@ -1,66 +1,54 @@
 import React, { useState } from "react";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleBookDemo = () => {
+    window.open("https://wa.me/919703049286?text=Hi%2C%20I%20would%20like%20to%20book%20a%20demo.", "_blank");
+  };
+
   return (
     <header className="bg-[#12003E] shadow-md px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo & Explore */}
+        {/* Logo */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
-            <img
-              src="/gsr.jpg"
-              alt="logo"
-              className="w-30 h-10"
-            />
-            {/* <span className="text-white text-2xl font-extrabold">
-              Educ<span className="text-[#00FF9C]">rat</span>
-            </span> */}
+            <img src="/gsr.jpg" alt="logo" className="w-30 h-10" />
           </div>
-          {/* <a
-            href="#"
-            className="hidden md:flex items-center text-[#00FF9C] font-semibold text-lg gap-2"
-          >
-            <Menu className="w-5 h-5" /> Explore
-          </a> */}
         </div>
 
         {/* Hamburger for Mobile */}
         <div className="md:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="text-white"
-          >
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Nav Links + Icons (Desktop) */}
         <div className="hidden md:flex items-center gap-8 text-white text-sm">
-          <a href="/" className="hover:text-[#00FF9C]">Home </a>
-          <a href="/courses" className="hover:text-[#00FF9C]">Courses </a>
-          {/* <a href="#" className="hover:text-[#00FF9C]">Blog </a> */}
-          {/* <a href="#" className="hover:text-[#00FF9C]">Shop</a> */}
+          <a href="/" className="hover:text-[#00FF9C]">Home</a>
+          <a href="/courses" className="hover:text-[#00FF9C]">Courses</a>
           <a href="/about" className="hover:text-[#00FF9C]">About</a>
           <a href="/contact" className="hover:text-[#00FF9C]">Contact</a>
         </div>
 
-        {/* Icons + Login (Desktop) */}
-        <div className="hidden md:flex items-center gap-6">
-          {/* <Search className="text-white w-5 h-5 cursor-pointer" /> */}
-          <div className="relative">
-            {/* <ShoppingBag className="text-white w-5 h-5 cursor-pointer" /> */}
-            {/* <span className="absolute -top-2 -right-2 bg-[#7C4DFF] text-white text-[10px] px-1 rounded-full">0</span> */}
-          </div>
+        {/* Icons + Buttons (Desktop) */}
+        <div className="hidden md:flex items-center gap-4">
           <button
-      className="bg-white text-[#12003E] px-5 py-1.5 rounded-xl font-semibold text-sm"
-      onClick={() => navigate("/login")}
-    >
-      Log in
-    </button>
+            className="bg-[#00FF9C] text-[#12003E] px-5 py-1.5 rounded-xl font-semibold text-sm hover:bg-[#00e68c]"
+            onClick={handleBookDemo}
+          >
+            Book Demo
+          </button>
+          <button
+            className="bg-white text-[#12003E] px-5 py-1.5 rounded-xl font-semibold text-sm"
+            onClick={() => navigate("/login")}
+          >
+            Log in
+          </button>
         </div>
       </div>
 
@@ -74,14 +62,18 @@ const Navbar = () => {
           <a href="#" className="block px-4 py-2 hover:bg-[#1c065c]">Pages ▾</a>
           <a href="#" className="block px-4 py-2 hover:bg-[#1c065c]">Contact</a>
 
-          {/* Mobile Icons & Login */}
-          <div className="flex gap-4 px-4 pt-2 border-t border-gray-700">
-            <Search className="w-5 h-5" />
-            <div className="relative">
-              <ShoppingBag className="w-5 h-5" />
-              <span className="absolute -top-2 -right-2 bg-[#7C4DFF] text-white text-[10px] px-1 rounded-full">0</span>
-            </div>
-            <button className="bg-white text-[#12003E] px-4 py-1 rounded-xl font-semibold text-sm ml-auto">
+          {/* Mobile Icons & Buttons */}
+          <div className="flex flex-col gap-2 px-4 pt-2 border-t border-gray-700">
+            <button
+              className="bg-[#00FF9C] text-[#12003E] px-4 py-2 rounded-xl font-semibold text-sm"
+              onClick={handleBookDemo}
+            >
+              Book Demo
+            </button>
+            <button
+              className="bg-white text-[#12003E] px-4 py-2 rounded-xl font-semibold text-sm"
+              onClick={() => navigate("/login")}
+            >
               Log in
             </button>
           </div>
